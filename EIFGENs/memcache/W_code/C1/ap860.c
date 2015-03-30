@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern void F860_6950(EIF_REFERENCE);
+extern void F860_6954(EIF_REFERENCE);
 extern void EIF_Minit860(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {APPLICATION}.make */
-void F860_6950 (EIF_REFERENCE Current)
+void F860_6954 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "make";
@@ -52,12 +52,12 @@ void F860_6950 (EIF_REFERENCE Current)
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 859, Current, 0, 0, 12586);
+	RTEAA(l_feature_name, 859, Current, 0, 0, 12590);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(859, Current, 12586);
+	RTDBGEAA(859, Current, 12590);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	tr1 = RTMS_EX_H("Hello Eiffel World!\012",20,1206243338);
