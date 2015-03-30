@@ -6,5 +6,11 @@ note
 
 class
 	STRATEGY
-
+create
+	make
+feature -- initialization
+	make
+	do
+		--do nothing
+	end
 end
