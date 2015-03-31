@@ -19,16 +19,19 @@ feature -- initialization
 	make(a_keep_time:DOUBLE; an_auto_delete:BOOLEAN; a_strategy:STRATEGY)
 	do
 		--implementation
-		keep_time := a_keep_time
-		auto_delete := an_auto_delete
-		strategy := a_strategy
-		elements := array[10]
 	end
-feature -- putting
+	ensure
+		keep_time_assign: keep_time = a_keep_time
+		auto_delete_assign: auto_delte = an_auto_delete
+		a_strategy_assign: strategy = a_strategy
+
+feature --putting
 	put(value:INTEGER)
 	do
 		--implementation
 	end
+	ensure
+		is_not_empty: is_empty /= true
 feature -- gettting
 	get(key:STRING):STRING
 	do
@@ -41,9 +44,17 @@ feature --hash
 		--implementation
 		result := "result"
 	end
-feature -- contains
+feature --contains
+	require
+		is_not_empty_condition: is_empty /= true
+
 	contains(value:STRING):BOOLEAN
 	do
 		--implementation
+	end
+feature --check whether storage is empty
+	is_empty:BOOLEAN
+	do
+		--implementations
 	end
 end

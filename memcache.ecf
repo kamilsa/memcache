@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-13-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-13-0 http://www.eiffel.com/developers/xml/configuration-1-13-0.xsd" name="Memcache" uuid="098C012F-510C-4A44-8A51-A07AADFA513D">
-	<target name="Memcache">
-		<root feature="make" class="APPLICATION"/>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-13-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-13-0 http://www.eiffel.com/developers/xml/configuration-1-13-0.xsd" name="memcache" uuid="098C012F-510C-4A44-8A51-A07AADFA513D">
+	<target name="memcache">
+		<root class="APPLICATION" feature="make"/>
 		<option warning="true">
 			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
 		</option>
 		<setting name="console_application" value="true"/>
-		<precompile name="base_pre" location="$ISE_PRECOMP/base-safe.ecf"/>
-		<library name="base" location="$ISE_LIBRARY/library/base/base-safe.ecf"/>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base-safe.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base-safe.ecf"/>
+		<library name="thread" location="$ISE_LIBRARY\library\thread\thread-safe.ecf"/>
 		<cluster name="memcache" location=".\" recursive="true">
 			<file_rule>
 				<exclude>/EIFGENs$</exclude>
-				<exclude>/.svn$</exclude>
 				<exclude>/CVS$</exclude>
+				<exclude>/.svn$</exclude>
 			</file_rule>
 		</cluster>
 	</target>

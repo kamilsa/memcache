@@ -28,5 +28,4 @@ feature -- execute remove implementation
 	do
 		-- implementation
 	end
-
 end

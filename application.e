@@ -16,7 +16,7 @@ feature {NONE} -- Initialization
 	cache:CACHE
 	strategy:STRATEGY
 	make
-			-- Run application.
+			-- Run application
 		do
 			--| Add your code here
 		end

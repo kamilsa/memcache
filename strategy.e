@@ -14,12 +14,12 @@ feature -- initialization
 		--do nothing
 	end
 feature --put executing
+	deferred
 	execute_put(element:ELEMENT; where:ARRAY[INTEGER])
-	deferred
 feature --get executing
+	deferred
 	execute_get(key:STRING):STRING
-	deferred
 feature --remove executing
-	execute_remove is
 	deferred
+	execute_remove is
 end
