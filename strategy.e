@@ -4,22 +4,34 @@ note
 	date: "$Date$"
 	revision: "$Revision$"
 
-class
+deferred class
 	STRATEGY
-create
-	make
-feature -- initialization
-	make
-	do
-		--do nothing
-	end
 feature --put executing
+	execute_put(element:ELEMENT; where:ARRAY[ELEMENT])
 	deferred
-	execute_put(element:ELEMENT; where:ARRAY[INTEGER])
+	end
 feature --get executing
+	execute_get(where:ARRAY[ELEMENT]):ELEMENT
 	deferred
-	execute_get(key:STRING):STRING
+	end
 feature --remove executing
+	execute_remove(where:ARRAY[ELEMENT])
 	deferred
-	execute_remove is
+	end
+feature --is empty checking
+	check_is_empty(where:ARRAY[ELEMENT]):BOOLEAN
+	deferred
+	end
+feature -- check whether given element exists in collection
+	check_contains(element:ELEMENT; where:ARRAY[ELEMENT]):BOOLEAN
+	deferred
+	end
+feature -- execute show
+	execute_show(where:ARRAY[ELEMENT])
+	deferred
+	end
+feature -- type
+	type:STRING
+	deferred
+	end
 end

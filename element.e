@@ -11,29 +11,30 @@ create
 feature{NONE} --initialization
 	key:STRING
 	value:STRING
-	creation_date:DATE
+	priority:INTEGER
 
-	make(a_key:STRING; a_value:STRING)
+	make(a_key:STRING; a_value:STRING; a_priority:INTEGER)
 	do
-		--impementation
-	end
+		key := a_key
+		value := a_value
+		priority := a_priority
 	ensure
 		key_assigned: key = a_key
 		value_assigned: value = a_value
+		priority_assigned: priority = a_priority
+	end
 
 feature -- getters
 	get_key:STRING
 	do
-		-- implementation
+		Result := key
 	end
-
 	get_value:STRING
 	do
-		-- implementation
+		Result := value
 	end
-
-	get_creation_date:DATE
+	get_priority:INTEGER
 	do
-		-- implementation
+		Result := priority
 	end
 end
