@@ -59,8 +59,9 @@ feature {NONE} -- Initialization
 				io.put_string ("1 - Create new cache%N")
 				io.put_string ("2 - Add new element to cache%N")
 				io.put_string ("3 - Show cache's content")
+				io.put_string ("4 - Exit")
 				io.read_line
-				if io.last_string ~ "q" then
+				if io.last_string ~ "4" then
 					exit := True
 					print ("Mooooo!%N")
 				elseif io.last_string ~ "1" then
