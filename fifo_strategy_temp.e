@@ -91,16 +91,25 @@ feature -- show content
 		i:INTEGER
 		count:INTEGER
 	do
-		print("HERE")
+		from i := 1
+		until i > where.capacity
+		loop
+			print("i = ")
+			print(i)
+			print(" ")
+			print(where.at (i).get_value)
+			print("%N")
+			i := i + 1
+		end
 		from
 			i := head
 			count := 1
 		until
 			count > number
 		loop
-			io.put_string (where.at (i).get_value)
+			print (where.at (i).get_value)
 			i := i + 1
-			if (i = where.capacity) then
+			if (i = where.capacity + 1) then
 				i := 1
 			end
 			count := count + 1
